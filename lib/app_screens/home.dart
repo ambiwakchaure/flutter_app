@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
       child: Container(
           alignment: Alignment.center,
           color: Colors.deepPurple,
-          padding: EdgeInsets.only(left: 10.0,top: 40.0),
+          padding: EdgeInsets.only(left: 10.0, top: 40.0),
           //width: 200.0,
           //height: 100.0,
           //margin: EdgeInsets.all(15.0),
@@ -72,9 +72,27 @@ class Home extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
+              FlightImageAsset()
             ],
           )),
     );
+  }
+}
+
+class FlightImageAsset extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    AssetImage assetImage = AssetImage('images/flight.png');
+
+    Image image = Image(
+      image: assetImage,
+      height: 200.0,
+      width: 200.0,
+    );
+
+    return Container(
+        child: image,
+        margin: EdgeInsets.only(top: 20.0));
   }
 }
