@@ -7,7 +7,7 @@ void main() {
     home: Scaffold(
       appBar: AppBar(
           title:
-              Text("Basic Listview", style: TextStyle(fontFamily: 'Raleway'))),
+          Text("Basic Listview", style: TextStyle(fontFamily: 'Raleway'))),
       body: getListView(),
     ),
   ));
@@ -20,7 +20,7 @@ Widget getListView() {
         leading: Icon(Icons.landscape),
         title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
         subtitle:
-            Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
+        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
         trailing: Icon(Icons.wb_sunny),
         onTap: () {
           debugPrint("Landscaped tapped");
@@ -30,28 +30,28 @@ Widget getListView() {
         leading: Icon(Icons.landscape),
         title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
         subtitle:
-            Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
+        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
         trailing: Icon(Icons.wb_sunny),
       ),
       ListTile(
         leading: Icon(Icons.landscape),
         title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
         subtitle:
-            Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
+        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
         trailing: Icon(Icons.wb_sunny),
       ),
       ListTile(
         leading: Icon(Icons.landscape),
         title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
         subtitle:
-            Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
+        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
         trailing: Icon(Icons.wb_sunny),
       ),
       ListTile(
         leading: Icon(Icons.landscape),
         title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
         subtitle:
-            Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
+        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
         trailing: Icon(Icons.wb_sunny),
       ),
       Text("Yet Another element in list",
