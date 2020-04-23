@@ -14,7 +14,17 @@ class Home extends StatelessWidget {
         //padding: EdgeInsets.all(15.0),
         //margin: EdgeInsets.only(right : 15.0,left: 15.0,top: 15.0,bottom: 15.0),
         //padding: EdgeInsets.only(right : 15.0,left: 15.0,top: 15.0,bottom: 15.0),
-        child: Text("Flight", textDirection: TextDirection.ltr),
+        child: Text(
+            "Flight",
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+              decoration: TextDecoration.none,
+              fontSize: 75.0,
+              fontFamily: "Raleway",
+              color: Colors.white
+              //fontStyle: FontStyle.italic
+            ),
+        ),
       ),
     );
   }
