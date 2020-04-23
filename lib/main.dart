@@ -7,60 +7,26 @@ void main() {
     home: Scaffold(
       appBar: AppBar(
           title:
-          Text("Basic Listview", style: TextStyle(fontFamily: 'Raleway'))),
+              Text("Long Listview", style: TextStyle(fontFamily: 'Raleway'))),
       body: getListView(),
     ),
   ));
 }
 
+List<String> getListElements() {
+  var items = List<String>.generate(1000, (counter) => "Items $counter");
+  return items;
+}
+
 Widget getListView() {
-  var listView = ListView(
-    children: <Widget>[
-      ListTile(
-        leading: Icon(Icons.landscape),
-        title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
-        subtitle:
-        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
-        trailing: Icon(Icons.wb_sunny),
-        onTap: () {
-          debugPrint("Landscaped tapped");
-        },
-      ),
-      ListTile(
-        leading: Icon(Icons.landscape),
-        title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
-        subtitle:
-        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
-        trailing: Icon(Icons.wb_sunny),
-      ),
-      ListTile(
-        leading: Icon(Icons.landscape),
-        title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
-        subtitle:
-        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
-        trailing: Icon(Icons.wb_sunny),
-      ),
-      ListTile(
-        leading: Icon(Icons.landscape),
-        title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
-        subtitle:
-        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
-        trailing: Icon(Icons.wb_sunny),
-      ),
-      ListTile(
-        leading: Icon(Icons.landscape),
-        title: Text("Landscape", style: TextStyle(fontFamily: 'Raleway')),
-        subtitle:
-        Text("Beautiful view !", style: TextStyle(fontFamily: 'Raleway')),
-        trailing: Icon(Icons.wb_sunny),
-      ),
-      Text("Yet Another element in list",
-          style: TextStyle(fontFamily: 'Raleway', height: 2.0)),
-      Container(
-        color: Colors.red,
-        height: 50.0,
-      )
-    ],
-  );
+  var listItems = getListElements();
+  var listView = ListView.builder(itemBuilder: (context, index) {
+    //item builder loads only visible element into the memory other hides it so its a memory efficient
+    return ListTile(
+      trailing: Icon(Icons.arrow_back),
+      leading: Icon(Icons.landscape),
+      title: Text(listItems[index], style: TextStyle(fontFamily: 'Raleway')),
+    );
+  });
   return listView;
 }
