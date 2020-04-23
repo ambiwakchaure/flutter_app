@@ -73,7 +73,8 @@ class Home extends StatelessWidget {
                   )
                 ],
               ),
-              FlightImageAsset()
+              FlightImageAsset(),
+              FlightBookButton()
             ],
           )),
     );
@@ -91,8 +92,40 @@ class FlightImageAsset extends StatelessWidget {
       width: 200.0,
     );
 
+    return Container(child: image, margin: EdgeInsets.only(top: 20.0));
+  }
+}
+
+class FlightBookButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Container(
-        child: image,
-        margin: EdgeInsets.only(top: 20.0));
+      child: RaisedButton(
+          color: Colors.deepOrange,
+          child: Text(
+            "Book your flight",
+            style: TextStyle(
+                fontSize: 20.0, color: Colors.white, fontFamily: 'Raleway'),
+          ),
+          elevation: 6.0,
+          onPressed: () => bookFlight(context)),
+      margin: EdgeInsets.only(top: 30.0),
+      width: 250.0,
+      height: 50.0,
+    );
+  }
+
+  void bookFlight(BuildContext context) {
+    var alertDialog = AlertDialog(
+      title: Text(
+        "Flight Booked Successfully",
+        style: TextStyle(fontFamily: 'Raleway'),
+      ),
+      content: Text("Have a pleasant flight",
+          style: TextStyle(fontFamily: 'Raleway')),
+    );
+
+    showDialog(
+        context: context, builder: (BuildContext context) => alertDialog);
   }
 }
